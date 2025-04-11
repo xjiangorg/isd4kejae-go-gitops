@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: isd4kejae-go-gitops
+  description: This is GitOps manifest for isd4kejae-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=isd4kejae-go
+    backstage.io/kubernetes-id: isd4kejae-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: isd4kejae-go-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:isd4kejae-go

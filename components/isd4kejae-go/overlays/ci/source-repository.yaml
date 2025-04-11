@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: isd4kejae-go-repository
+spec:
+  url: https://github.com/xjiangorg/isd4kejae-go
